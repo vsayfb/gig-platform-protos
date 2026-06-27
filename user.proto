@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/vsayfb/gig-platform-protos";
+
+service UserService {
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+}
+
+message GetUserRequest {
+  string user_id = 1;
+}
+
+message GetUserResponse {
+  string id         = 1;
+  string name       = 2;
+  string avatar_url = 3;
+}
