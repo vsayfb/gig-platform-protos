@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "github.com/vsayfb/gig-platform-protos";
+
+service GigService {
+  rpc GetGig(GetGigRequest) returns (GetGigResponse);
+}
+
+message Gig {
+  string title = 1;
+}
+
+message GetGigRequest {
+  string gig_id = 1;
+}
+
+message GetGigResponse {
+  Gig gig = 1;
+}
+
+
+
